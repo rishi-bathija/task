@@ -5,7 +5,13 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://task-frontend-mu.vercel.app"],
+        methods: ["GET", "POST"],
+        credentials: true,
+    }
+));
 
 // db connection
 connectDB();
