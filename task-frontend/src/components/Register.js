@@ -50,7 +50,7 @@ const Register = () => {
             setErrors({ passwordError: '', confirmPasswordError: '', backendError: '' });
 
             // Proceed with registration API call
-            const response = await axios.post('http://localhost:5000/api/auth/register', {
+            const response = await axios.post('https://task-backend-tau-one.vercel.app/api/auth/register', {
                 username,
                 email,
                 password,
